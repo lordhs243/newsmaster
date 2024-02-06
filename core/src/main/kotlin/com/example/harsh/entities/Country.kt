@@ -8,15 +8,15 @@ import javax.persistence.Table
 
 @Entity
 @Table(name = "country")
-data class Country (
+class Country : BaseEntity() {
 
     @Id
     @Column(name = "country_reference_id")
-    var countryReferenceId: UUID? = null,
+    var countryReferenceId: UUID? = null
 
     @Column(name = "country_name")
-    var countryName: String? = null,
+    var countryName: String? = null
 
     @Column(name = "country_code")
     var countryCode: String? = null
-)
+}

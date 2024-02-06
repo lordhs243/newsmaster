@@ -8,12 +8,12 @@ import javax.persistence.Table
 
 @Entity
 @Table(name = "country")
-data class Category (
+class Category : BaseEntity() {
 
     @Id
     @Column(name = "category_reference_id")
-    var categoryReferenceId: UUID? = null,
+    var categoryReferenceId: UUID? = null
 
     @Column(name = "category_name")
-    var categoryName: String? = null,
-)
+    var categoryName: String? = null
+}
